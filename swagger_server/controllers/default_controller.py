@@ -1,7 +1,7 @@
-from swagger_server.service.student_service import *
 import connexion
 import six
 
+from swagger_server.service.student_service import *
 from swagger_server.models.student import Student  # noqa: E501
 from swagger_server import util
 
@@ -32,9 +32,8 @@ def delete_student(student_id):  # noqa: E501
 
     :rtype: None
     """
-    if delete(student_id):
-        return delete(student_id)
-    return 404, 'not found'
+
+    return delete(student_id)
 
 
 def get_student_by_id(student_id):  # noqa: E501
@@ -47,6 +46,5 @@ def get_student_by_id(student_id):  # noqa: E501
 
     :rtype: Student
     """
-    if get_by_id(student_id):
-        return get_by_id(student_id)
-    return 404, 'not found'
+
+    return get_by_id(student_id)
