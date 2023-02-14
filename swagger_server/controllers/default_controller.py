@@ -34,7 +34,7 @@ def delete_student(student_id):  # noqa: E501
     """
     if delete(student_id):
         return delete(student_id)
-    return 500, 'error, not found'
+    return 404, 'not found'
 
 
 def get_student_by_id(student_id):  # noqa: E501
@@ -49,4 +49,4 @@ def get_student_by_id(student_id):  # noqa: E501
     """
     if get_by_id(student_id):
         return get_by_id(student_id)
-    return 500, 'error, not found'
+    return 404, 'not found'
